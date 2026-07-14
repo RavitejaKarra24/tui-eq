@@ -1,7 +1,12 @@
 [package]
 name = "eqterm"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
+description = "Vim-first terminal music player with AutoEq headphone/IEM presets"
+license = "MIT"
+readme = "README.md"
+keywords = ["music", "tui", "eq", "autoeq", "mpv"]
+categories = ["command-line-utilities", "multimedia"]
 
 [dependencies]
 anyhow = "1.0"
@@ -18,3 +23,8 @@ zip = "0.6"
 
 [build-dependencies]
 pkg-config = "0.3"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
